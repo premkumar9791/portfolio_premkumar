@@ -1,0 +1,440 @@
+<header id="n">
+  <nav class="navbar navbar-expand-lg fixed-top  shadow-lg mx-lg-5 rounded navbarScroll" [class.navbarDark]="isNavbarDark">
+     <div class="container " >
+         <a class="navbar-brand" [class.text]="isNavbarDark"  href="#">Premkumar</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse  "  id="navbarSupportedContent">
+             <ul class="navbar-nav ms-auto text-white" >
+                 <li class="nav-item active">
+                     <a class="nav-link navbt " [class.text]="isNavbarDark" href="#h1">Home</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link navbt" [class.text]="isNavbarDark"   href="#a1">About</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link navbt" [class.text]="isNavbarDark"  href="#s1">Skills</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link navbt" [class.text]="isNavbarDark"  href="#r1">resume</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link navbt" [class.text]="isNavbarDark"  href="#p1">portfolio</a>
+               </li>
+                 <li class="nav-item">
+                     <a class="nav-link navbt" [class.text]="isNavbarDark"  href="#c1">Contact</a>
+                 </li>
+             </ul>
+             
+         </div>
+     </div>
+ </nav>
+ </header>
+ <!-- navbar end -->
+ 
+  <!-- main banner -->
+  <section class="bgimage" id="h1">
+     <div class="container-fluid">
+         <div class="row">
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+             <h2 class="hero_title animate ">Hi, it's me prem</h2>
+             <p class="hero_desc animate">I am a Web Developer</p>
+             <button (click)="toggleDivVisibility()" type="button"  class="btn btn-primary hero_button animate" data-toggle="button" aria-pressed="false" autocomplete="off">
+                 contact
+               </button>
+               <div *ngIf="isDivVisible" class="hero_div animate p-4 ">
+                   <a class="contacticon  mx-2" href="https://www.facebook.com/prem.rj.3388?mibextid=LQQJ4d" title="fb"><i class="bi bi-facebook"></i></a> 
+                   <a class="contacticon mx-2 " title="instagram"  href="https://www.instagram.com/premrj9791?igsh=MXFvd2V5ZWdxdzV4dA%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a>
+                   <a class="contacticon mx-2" title="twitter" href="https://x.com/premrj9791/status/1743982121923063933?s=46"><i class="bi bi-twitter"></i></a>
+                   <a class="contacticon mx-2" title="linkedin" href="https://www.linkedin.com/in/prem-rj-155b531a4"><i class="bi bi-linkedin"></i></a>   
+               </div>
+               
+         </div>
+         </div>
+     </div>
+ </section>
+ <!-- homepage end -->
+  <!-- ======= About Section ======= -->
+  <section id="a1" class="about">
+     <div class="container ">
+       <div class="section-title">
+         <h2 class="text-center">About</h2>
+         <p>As a passionate and motivated Mechanical Engineering student.I am eager to launch my career in IT industry where I can apply my theoretical knowledge and hands-on skills. I am seeking an opportunity to contribute effectively to a dynamic team and learn and grow within a professional environment.</p><br>
+       </div>
+       <div class="row">
+         <div class="col-lg-5" data-aos="fade-right">
+           <img src="assets/img/prem abt pic.png" class="img-fluid" alt="">
+         </div>
+         <div class="col-lg-7 pt-4 pt-lg-0 content" data-aos="fade-left">
+           <h3>Web Developer</h3>
+           <p >
+             Enthusiastic and dedicated web developer with a solid foundation in HTML, CSS, and TypeScript.Eager to leverage my skills in front-end and back-end development to contribute to dynamic and creative web projects.
+           </p><br>
+           <div class="row">
+             <div class="col-lg-6">
+               <ul>
+                 <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong><span>11 May 2001</span></li>
+                 <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong><span>+91 9791090240</span></li>
+                 <li><i class="bi bi-chevron-right"></i> <strong>City:</strong><span>Tamilnadu, India</span></li>
+               </ul>
+             </div>
+             <div class="col-lg-6">
+               <ul>
+                 <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong><span>22</span></li>
+                 <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong><span>BE.mechanical</span></li>
+                 <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong><span>premrj9791@gmail.com</span></li>
+               </ul>
+             </div>
+           </div>
+           <p>Demonstrated commitment to creating websites that seamlessly adapt to various devices.Continuous learner, with a focus on staying updated with the latest web technologies.</p>
+         </div>
+       </div>
+ 
+     </div>
+   </section><!-- End About Section -->
+ <!-- skill section-->
+ <section id="s1">
+     <div class="container  section-title">
+         <h2 class="text-center skill anim">skills</h2>
+         <p class="mb-5 anim">
+           Quick learner, able to adapt to new technologies and frameworks.
+           Tailor the skills to align with the job requirements and provide specific examples or projects where I can apply  each skill.
+           Strong analytical and problem-solving skills developed through coding challenges and projects
+         </p>
+         <div class="row mt-4">
+             <div class="col-lg-6  ">
+                 <div class="container shadow-lg  p-1 mb-3 bg-white anim  rounded">
+                     <h5><i><img src="/assets/img/html-5 (1).png" class="skilllogo" alt="logo"></i>html<span class="float-end">100%</span> </h5>
+                 <div class="progress">
+                     <div class="progress-bar bar1 " role="progressbar" title="bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>
+                 </div>
+                 <div class="container shadow-lg  p-1 mb-3 bg-white anim  rounded">
+                     <h5><i><img src="/assets/img/css-3 (1).png" class="skilllogo" alt="logo"></i>css<span class="float-end">90%</span> </h5>
+                 <div class="progress">
+                     <div class="progress-bar bar7 " role="progressbar" title="bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>
+                 </div>
+                 <div class="container shadow-lg p-1 mb-3 bg-white anim  rounded">
+                     <h5><i><img src="/assets/img/ts-logo-128.png" class="skilllogo" alt="logo"></i>&nbsp;typescript<span class="float-end">70%</span> </h5>
+                 <div class="progress">
+                     <div class="progress-bar bar2 " role="progressbar" title="bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>
+                 </div>
+                 <div class="container shadow-lg p-1 mb-3 bg-white anim  rounded">
+                     <h5><i><img src="/assets/img/bootstrap.png" class="skilllogo" alt="logo"></i>&nbsp;bootstrap<span class="float-end">90%</span> </h5>
+ 
+                 <div class="progress">
+                     <div class="progress-bar bar3 " role="progressbar" title="bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>
+                 </div>
+                 
+              
+             </div>
+             
+             <div class="col-lg-6 ">
+                 <div class="container shadow-lg p-1 mb-3 bg-white anim  rounded">
+                     <h5><i><img src="/assets/img/icons8-angularjs-48.png" class="skilllogo" alt="logo"></i>angular<span class="float-end">95%</span> </h5>
+                 <div class="progress">
+                     <div class="progress-bar bar4 " role="progressbar" title="bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>
+                 </div>
+                 <div class="container shadow-lg p-1 mb-3 bg-white anim  rounded">
+                     <h5><i><img src="/assets/img/java (1).png" class="skilllogo" alt="logo"></i>java<span class="float-end">60%</span> </h5>
+                 <div class="progress">
+                     <div class="progress-bar bar5 " role="progressbar" title="bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>
+                 </div>
+                 <div class="container shadow-lg p-1 mb-3 bg-white anim  rounded">
+                     <h5><i><img src="/assets/img/big-data.png" class="skilllogo" alt="logo"></i>SQL<span class="float-end">85%</span> </h5>
+                 <div class="progress">
+                     <div class="progress-bar bar6 " role="progressbar" title="bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                   </div>
+                 </div>
+                 <div class="container shadow-lg p-1 mb-3 bg-white anim  rounded">
+                   <h5><i><img src="/assets/img/GitHub-Logo.png" class="skilllogo" alt="logo"></i>github<span class="float-end">80%</span> </h5>
+               <div class="progress">
+                   <div class="progress-bar bar8 " role="progressbar" title="bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                 </div>
+               </div>
+             </div>
+         </div>
+             </div>
+ </section>
+ 
+ <!-- skill end -->
+ <section id="r1" class="resume">
+     <div class="container">
+       <div class="section-title">
+         <h2  class="text-center">Resume</h2>
+        </div>
+       <div class="row">
+         <div class="col-lg-6" data-aos="fade-up">
+           <h3 class="resume-title">PREMKUMAR R</h3>
+           <div class="resume-item pb-0">
+             <h4>Contact Details</h4>
+             <ul>
+               <li>Premrj9791@gmail.com</li>
+               <li><a href="https://www.linkedin.com/in/prem-rj-155b531a4">https://www.linkedin.com/in/prem-rj-155b531a4</a></li>
+               <li>Chennai</li>
+               <li>Mobile No:9791090240</li>
+             </ul>
+           </div>
+           <h3 class="resume-title">Career Objective</h3>
+           <div class="resume-item">
+             <p>B.E Mechanical engineering graduate looking For an opportunity in a growth-oriented Organization which offers me challenging Opportunities to enhance my professional and Technical knowledge.</p>
+             </div>
+ 
+           <h3 class="resume-title">Education</h3>
+           <div class="resume-item">
+             <h4>Bachelor of Engineering &amp; Mechanical</h4>
+             <h5>2019 - 2023</h5>
+             <p><em> Tagore Engineering College,chennai</em></p>
+             <p>CGPA of 7.6</p>
+           </div> 
+           <div class="resume-item">
+             <h4>Higher Secondary</h4>
+             <h5>2018 - 2019</h5>
+             <p><em> St Columbia's Higher Secondary School,chengalpattu</em></p>
+             <p>percentage of 54</p>
+           </div>
+           <div class="resume-item">
+             <h4>Secondary</h4>
+             <h5>2016 - 2017</h5>
+             <p><em> St Columbia's Higher Secondary School,chengalpattu</em></p>
+             <p>percentage of 84</p>
+           </div>
+         </div>
+         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+           <h3 class="resume-title">Skills</h3>
+           <div class="resume-item">
+             <h4>Technical Skills</h4>
+             <ul>
+               <li>HTML</li>
+               <li>CSS</li>
+               <li>Typscript</li>	
+               <li>bootstrap</li>
+               <li>Angular</li>	
+               <li>Java</li>	
+               <li>SQL</li>	 
+             </ul>
+           </div>
+           <div class="resume-item">
+             <h4>Soft Skills</h4>
+             <ul>
+               <li>Problem Solving and Critical Thinking</li>
+               <li>  Adaptability and Flexibility</li>
+               <li>  Creativity and Innovation</li>
+               <li>  Analytical and Logical Thinking</li>
+             </ul>
+           </div>
+           <div class="resume-item">
+             <h4>github</h4>
+              <a href="https://github.com/premkumar9791">https://github.com/premkumar9791</a>
+           </div>
+           <h3 class="resume-title">Certification</h3>
+           <div class="resume-item">
+             <h5> Sept 2023 – feb 2024</h5>
+             <p>Completed Full Stack Development Course in Besant Technologies.</p>
+             </div>
+             <h3 class="resume-title">Declaration</h3>
+             <div class="resume-item">
+               <p>I do hereby declare that the information furnished above are true to the best of my knowledge. </p>
+               </div>
+         </div>
+       </div>
+ 
+     </div>
+   </section>
+   <!-- End Resume Section -->
+ <!-- portfolio section-->
+ <section id="p1"  class="portfolio">
+   <div class="container mt-3">
+       <h2 class="text-center portfolio_tittle">Portfolio</h2>
+       <div class="row">
+           <div class="col-lg-4 mt-4">
+               <div class="card">
+                   <img class="card-img-top portfo" src="/assets/img/sagitor_page.png" alt="Card image" >
+                   <div class="card-body">
+                       <h4 class="card-title">sagitor</h4>
+                       <p class="card-text">This is a dedicated platform aimed at promoting a healthy lifestyle through fitness</p>
+                       <div class="text-center">
+                           <a href="https://sagitor-fitness-page-mxo8.vercel.app/home" class="btn port_button">Link</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+ 
+           <div class="col-lg-4 mt-4">
+               <div class="card portfolioContent">
+                   <img class="card-img-top portfo" src="/assets/img/portfolio_page.png" alt="Card image" >
+                   <div class="card-body">
+                       <h4 class="card-title">portfolio</h4>
+                       <p class="card-text">Explore the portfolio that highlight my creativity, technical expertise, and innovation.</p>
+                       <div class="text-center">
+                           <a href="#n" class="btn port_button">Link</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+ 
+           <div class="col-lg-4 mt-4">
+               <div class="card portfolioContent">
+                   <img class="card-img-top portfo" src="/assets/img/weather_page.png" alt="Card image" >
+                   <div class="card-body">
+                       <h4 class="card-title">weather</h4>
+                       <p class="card-text">Provided a forecast to help users plan ahead and get accurate weather updates.</p>
+                       <div class="text-center">
+                           <a href="https://weather-website-rouge.vercel.app/" class="btn port_button">Link</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <br>
+       <div class="row">
+           <div class="col-lg-4 mt-4">
+               <div class="card portfolioContent">
+                   <img class="card-img-top portfo" src="/assets/img/calculator_page.png" alt="Card image" >
+                   <div class="card-body">
+                       <h4 class="card-title">calculator</h4>
+                       <p class="card-text">The sleek and user-friendly calculator,from simple calculations to complex equations.</p>
+                       <div class="text-center">
+                           <a href="https://calculator-mu-puce.vercel.app/" class="btn port_button">Link</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+ 
+           <div class="col-lg-4 mt-4">
+               <div class="card portfolioContent">
+                   <img class="card-img-top portfo" src="/assets/img/xo_page.png" alt="Card image" >
+                   <div class="card-body">
+                       <h4 class="card-title">xo game</h4>
+                       <p class="card-text">Dive into the thrill of our X-O game – a classic with a modern twist!</p>
+                       <div class="text-center">
+                           <a href="https://xo-game-ozi3.vercel.app/"  class="btn port_button">Link</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+ 
+           <div class="col-lg-4 mt-4">
+               <div class="card portfolioContent">
+                   <img  class="card-img-top portfo" src="/assets/img/blogger_page.png" alt="Card image" >
+                   <div class="card-body">
+                       <h4 class="card-title">Blogger</h4>
+                       <p class="card-text">creating engaging content that captivates audiences.</p>
+                       <div class="text-center">
+                           <a href="https://github.com/premkumar9791/blogger" class="btn port_button">Link</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       </div>
+ </section>
+   
+ <!-- portfolio end -->
+ 
+ 
+ 
+    <!-- ======= Contact Section ======= -->
+    <section id="c1" class="contact">
+     <div class="container">
+ 
+       <div class="section-title">
+         <h2 class="text-center">Contact</h2>
+         <p>Have questions, suggestions, or just want to say hello? We'd love to hear from you! Our dedicated team is here to assist you. Feel free to reach out using the contact form below, and we'll get back to you as soon as possible. Your feedback is important to us as we strive to provide the best experience for our visitors. Thank you for connecting with us!</p>
+       </div>
+ 
+       <div class="row" data-aos="fade-in">
+ 
+         <div class="col-lg-5 d-flex align-items-stretch">
+           <div class="info">
+             <div class="address">
+               <i class="bi bi-geo-alt"></i>
+               <h4>Location:</h4>
+               <p>plotno:17,periyarstreet,thungabathranagar,<br>perumattunallur,chengalpattu,Tamilnadu-603202</p>
+             </div>
+ 
+             <div class="email">
+               <i class="bi bi-envelope"></i>
+               <h4>Email:</h4>
+               <p>premrj9791@gmail.com</p>
+             </div>
+ 
+             <div class="phone">
+               <i class="bi bi-phone"></i>
+               <h4>Call:</h4>
+               <p>+91 9791090240</p>
+             </div>
+ 
+             <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7780.65647785587!2d80.07990361351094!3d12.822053399709942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f7e8552ebedb%3A0xceb24014533410e6!2sPerumanttunallur%2C%20Tamil%20Nadu%20603202!5e0!3m2!1sen!2sin!4v1704613098934!5m2!1sen!2sin" class="iframcontact" allowfullscreen></iframe>
+           </div>
+ 
+         </div>
+ 
+         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+           <form action="forms" #myform = "ngForm" (ngSubmit) = "onSubmit()"  method="post" role="form" class="php-email-form">
+             <div class="row">
+               <div class="form-group col-md-6">
+                 <label for="name">Your Name</label>
+                 <input type="text" name="name" [(ngModel)]="formData.name" class="form-control" id="name" required>
+               </div>
+               <div class="form-group col-md-6">
+                 <label for="name">Your Email</label>
+                 <input type="email" title="email" [(ngModel)]="formData.email" class="form-control" name="email" id="email" required>
+               </div>
+             </div>
+             <div class="form-group">
+               <label for="name">Subject</label>
+               <input type="text" title="text" [(ngModel)]="formData.subject" class="form-control" name="subject" id="subject" required>
+             </div>
+             <div class="form-group">
+               <label for="name">Message</label>
+               <textarea class="form-control" [(ngModel)]="formData.message" title="message" name="message" rows="10" required></textarea>
+             </div>
+             <div class="my-3">
+               <div class="loading">Loading</div>
+               <div class="error-message"></div>
+               <div class="sent-message">Your message has been sent. Thank you!</div>
+             </div>
+             <div class="text-center"><button type="submit">Send Message</button>
+             <button title="reset" [class]="res"  class="reset" type="button" (click)="resetForm()"><i class="bi bi-arrow-clockwise"></i></button>
+           </div>
+           </form>
+         </div>
+         
+       </div>
+ 
+     </div>
+     <div class="container mt-3 formvalues p-5  shadow" *ngIf="myform.submitted" data-aos="fade-in">
+       <h2 class="text-center">Form Values</h2>
+       <p>Name:{{formData.name}}</p>
+       <p>Email:{{formData.email}}</p>
+       <p>Subject:{{formData.subject}}</p>
+       <p>Message:{{formData.message}}</p>
+  
+      </div>
+   </section><!-- End Contact Section -->
+ 
+ <!-- footer-->
+ <footer class="container shadow-lg p-3 mb-5 bg-white rounded">
+     <div class="foot1">
+        <h3 class="footh3">Follow Us</h3>
+        <div class="foot2">
+         <a class="ficon" href="https://www.facebook.com/prem.rj.3388?mibextid=LQQJ4d" title="fb"><i class="bi bi-facebook"></i></a> 
+         <a class="ficon" title="instagram"  href="https://www.instagram.com/premrj9791?igsh=MXFvd2V5ZWdxdzV4dA%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a>
+         <a class="ficon" title="twitter" href="https://x.com/premrj9791/status/1743982121923063933?s=46"><i class="bi bi-twitter"></i></a>
+         <a class="ficon" title="linkedin" href="https://www.linkedin.com/in/prem-rj-155b531a4"><i class="bi bi-linkedin"></i></a>   
+        </div>
+        <p>© Copyright 2024 premkumar. and its affiliates | Supplier Responsibility</p>
+     </div>
+ </footer>
+ <!-- footer end  -->
+ 
+ <router-outlet></router-outlet>
+ 
+ 
