@@ -428,12 +428,8 @@
                </div>
                <div class="form-group col-md-6">
                  <label for="name">Your Email</label>
-                 <input type="email" title="email" [(ngModel)]="formData.email" class="form-control" name="email" id="email" required  #email="ngModel">
-               <!-- Display error message if the email is invalid -->
-         <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
-          <div *ngIf="email.errors?.['required']">Email is required.</div>
-           <div *ngIf="email.errors?.['email']">Please enter a valid email address.</div>
-    </div>
+                 <input type="email" title="email" [(ngModel)]="formData.email" class="form-control" name="email" id="email" required >
+         
 
                </div>
              </div>
