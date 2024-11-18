@@ -81,7 +81,7 @@
              </div>
              <div class="col-lg-6">
                <ul>
-                 <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong><span>23</span></li>
+                 <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong><span >{{age}}</span></li>
                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong><span>BE.mechanical</span></li>
                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong><span>premrj9791@gmail.com</span></li>
                </ul>
@@ -237,7 +237,7 @@
            </div>
            <h3 class="resume-title">Certification</h3>
            <div class="resume-item">
-             <h5> Sept 2023 – feb 2024</h5>
+             <h5> Sept 2023 – Aprl 2024</h5>
              <p>Completed Full Stack Development Course in Besant Technologies.</p>
              </div>
              <h3 class="resume-title">Declaration</h3>
@@ -428,7 +428,13 @@
                </div>
                <div class="form-group col-md-6">
                  <label for="name">Your Email</label>
-                 <input type="email" title="email" [(ngModel)]="formData.email" class="form-control" name="email" id="email" required>
+                 <input type="email" title="email" [(ngModel)]="formData.email" class="form-control" name="email" id="email" required  #email="ngModel">
+               <!-- Display error message if the email is invalid -->
+         <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+          <div *ngIf="email.errors?.['required']">Email is required.</div>
+           <div *ngIf="email.errors?.['email']">Please enter a valid email address.</div>
+    </div>
+
                </div>
              </div>
              <div class="form-group">
@@ -439,12 +445,8 @@
                <label for="name">Message</label>
                <textarea class="form-control" [(ngModel)]="formData.message" title="message" name="message" rows="10" required></textarea>
              </div>
-             <div class="my-3">
-               <div class="loading">Loading</div>
-               <div class="error-message"></div>
-               <div class="sent-message">Your message has been sent. Thank you!</div>
-             </div>
-             <div class="text-center"><button type="submit">Send Message</button>
+           
+             <div class="text-center"><button type="submit" [disabled]="myform.invalid">Send Message</button>
              <button title="reset" [class]="res"  class="reset" type="button" (click)="resetForm()"><i class="bi bi-arrow-clockwise"></i></button>
            </div>
            </form>
@@ -453,14 +455,65 @@
        </div>
  
      </div>
-     <div class="container mt-3 formvalues p-5  shadow" *ngIf="myform.submitted" data-aos="fade-in">
-       <h2 class="text-center">Form Values</h2>
-       <p>Name:{{formData.name}}</p>
-       <p>Email:{{formData.email}}</p>
-       <p>Subject:{{formData.subject}}</p>
-       <p>Message:{{formData.message}}</p>
-  
+
+<!-- Success and Error Modals -->
+
+<!-- Success Modal -->
+<div class="modal fade" id="statusSuccessModal" tabindex="-1" aria-labelledby="statusSuccessModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+      <div class="modal-content">
+          <div class="modal-body text-center p-lg-4">
+              <!-- SVG for Success (Check Mark) -->
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                  <circle class="path circle" fill="none" stroke="#198754" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
+                  <polyline class="path check" fill="none" stroke="#198754" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+              </svg>
+              <h4 class="text-success mt-3">Oh Yeah!</h4>
+              <p class="mt-3">You have successfully sent your message.</p>
+              <button type="button" class="btn btn-sm mt-3 btn-success" data-bs-dismiss="modal">OK</button>
+          </div>
       </div>
+  </div>
+</div>
+
+<!-- Email Error Modal -->
+<div class="modal fade" id="statusemailErrorsModal" tabindex="-1" aria-labelledby="statusemailErrorsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+      <div class="modal-content">
+          <div class="modal-body text-center p-lg-4">
+              <!-- SVG for Error (X Mark) -->
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                  <circle class="path circle" fill="none" stroke="#db3646" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
+                  <line class="path line" fill="none" stroke="#db3646" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3" />
+                  <line class="path line" fill="none" stroke="#db3646" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2" />
+              </svg>
+              <h4 class="text-danger mt-3">Invalid Email!</h4>
+              <p class="mt-3">Please enter a valid email address.</p>
+              <button type="button" class="btn btn-sm mt-3 btn-danger" data-bs-dismiss="modal">OK</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Error Modal -->
+<div class="modal fade" id="statusErrorsModal" tabindex="-1" aria-labelledby="statusErrorsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+      <div class="modal-content">
+          <div class="modal-body text-center p-lg-4">
+              <!-- SVG for Error (X Mark) -->
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                  <circle class="path circle" fill="none" stroke="#db3646" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1" />
+                  <line class="path line" fill="none" stroke="#db3646" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3" />
+                  <line class="path line" fill="none" stroke="#db3646" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2" />
+              </svg>
+              <h4 class="text-danger mt-3">Error!</h4>
+              <p class="mt-3">There was an issue with sending your message.</p>
+              <button type="button" class="btn btn-sm mt-3 btn-danger" data-bs-dismiss="modal">OK</button>
+          </div>
+      </div>
+  </div>
+</div>
+    <!--end success button msg send  -->
    </section><!-- End Contact Section -->
  
  <!-- footer-->

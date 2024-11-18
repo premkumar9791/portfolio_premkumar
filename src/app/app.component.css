@@ -524,6 +524,61 @@ section {
     100% { transform: rotate(360deg); }
   }
 
+  /* success button */
+/* Modal content */
+.modal-content {
+  border-radius: 30px;
+}
+
+/* SVG styles */
+.modal-content svg {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Circle animation */
+.modal-content .path.circle {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  animation: dash 0.9s ease-in-out;
+}
+
+/* Line animation (X mark for error) */
+.modal-content .path.line {
+  stroke-dashoffset: 1000;
+  animation: dash 0.95s 0.35s ease-in-out forwards;
+}
+
+/* Check mark animation for success */
+.modal-content .path.check {
+  stroke-dashoffset: 1000;
+  animation: dash-check 0.95s 0.35s ease-in-out forwards;
+}
+
+/* Dash keyframes for the circle */
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Dash check keyframes for the check mark */
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+  /* success button end */
+
 /* footer */
 footer{
     height: 400px;
